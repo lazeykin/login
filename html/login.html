@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operative IQ</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet preload" href="../css/font.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="wrapper login-wrapper">
+    <div class="info-section">
+        <div class="info-section-content form-active" id="login">
+            <img class="info-section__logo" src="../assets/images/logo.svg" alt="logo">
+            <h1 class="info-section__title">Operative IQ Client Login</h1>
+            <div class="container--tabs">
+                <section class="tab-section row">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab-1">Traditional Login</a></li>
+                        <li class=""><a href="#tab-2">Biometric Login</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <form class="form" action="#">
+                                <div class="form__group form__group-login">
+                                    <input id="client-identifier" class="form__control" type="text"
+                                           placeholder="Client Identifier" autocomplete="off">
+                                    <label for="client-identifier" class="form__label-title">Client Identifier</label>
+                                </div>
+                                <div class="form__group form__group-login">
+                                    <input id="username" class="form__control" type="text"
+                                           placeholder="Username" autocomplete="off">
+                                    <label for="username" class="form__label-title">Username</label>
+                                </div>
+                                <div class="form__group form__group-login">
+                                    <input id="password" class="form__control" type="password"
+                                           placeholder="Password" autocomplete="off">
+                                    <label for="password" class="form__label-title">Password</label>
+                                </div>
+                                <div class="form__group-checkbox">
+                                    <input id="remember-me" class="form__control-checkbox" type="checkbox"
+                                           placeholder="Password" autocomplete="off">
+                                    <label for="remember-me" class="form__label-title form__control-checkbox-label">Remember me</label>
+                                </div>
+                                <button class="form__button login-button" type="submit">
+                                    Login
+                                    <img class="arrow-right" src="../assets/images/fi_arrow-right.svg" alt="->">
+                                </button>
+                            </form>
+                            <div>
+                                <ul class="login-issues">
+                                    <li><a class="login-issues__link" href="#">Forgot Password</a></li>
+                                    <li><a class="login-issues__link" href="./index.html">Change Identifier</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <form class="form" action="./login.html">
+                                <div class="form__group">
+                                    <input id="finger-client-identifier" class="form__control" type="text"
+                                           placeholder="Client Identifier" autocomplete="off">
+                                    <label for="finger-client-identifier" class="form__label-title">Client Identifier</label>
+                                </div>
+                                <div>
+                                    <div class="scanning-container">
+                                        <div class="lds-ring">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <p class="scanning">Scanning...</p>
+                                    </div>
+                                    <div class="union-image">
+                                        <img src="../assets/images/Union.svg" alt="union">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <hr class="divider">
+            <section>
+                <ul class="info-section__bottom">
+                    <li><a class="info-section__bottom-link" href="#">Home</a></li>
+                    <li><a class="info-section__bottom-link" href="#">Status Board</a></li>
+                    <li><a class="info-section__bottom-link" href="#">Contact Us</a></li>
+                    <li><a class="info-section__bottom-link" href="#">Resources</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="info-section-content form-not-active" id="choose-app">
+            <img class="info-section__logo" src="../assets/images/logo.svg" alt="logo">
+            <h1 class="info-section__title">Profile Update Requested</h1>
+            <section>
+                <p class="select-app">Please select your preferred application for login. You can change this later in
+                    your Crew
+                    Profile.
+                </p>
+                <ul class="links-container">
+                    <li><a href="#"><img src="../assets/images/front-line.png" alt=""></a></li>
+                    <li><a href="#"><img src="../assets/images/back-office.png" alt=""></a></li>
+                    <li><a href="#"><img src="../assets/images/status-board.png" alt=""></a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>
