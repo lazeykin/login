@@ -20,19 +20,35 @@
                 <img class="info-section__logo" src="../assets/images/logo.svg" alt="logo">
                 <h1 class="info-section__title">Operative IQ Client Login</h1>
             </section>
-            <section class="client-identifier__content mobile-content-section">
-                <div id="client-identifier-alert" class="alert">
+            <section class="login-type__main-section">
+                <div id="client-identifier-error" class="alert">
                 </div>
-                <form id="client-identifier-form" class="form" action="./login-type.html">
+                <form class="form">
                     <div class="form__group">
                         <input id="client-identifier" class="form__control" type="text"
                                placeholder="Client Identifier" autocomplete="off">
                         <label for="client-identifier" class="form__label-title">Client Identifier</label>
                     </div>
-                    <button class="form__button" type="submit">
-                        Next
-                        <img class="arrow-right" src="../assets/images/fi_arrow-right.svg" alt="->">
-                    </button>
+                    <ul class="login__type-container">
+                        <li>
+                            <a href="./login.html" class="login__type-link">
+                                Web Login
+                            <img class="arrow-right" src="../assets/images/fi_arrow-right.svg" alt="->">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="login__type-link">
+                                Dev Azure Login
+                            <img class="arrow-right" src="../assets/images/fi_arrow-right.svg" alt="->">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="login__type-link">
+                                Dev One Login
+                            <img class="arrow-right" src="../assets/images/fi_arrow-right.svg" alt="->">
+                            </a>
+                        </li>
+                    </ul>
                 </form>
             </section>
             <section>
@@ -47,6 +63,4 @@
         </div>
     </div>
 </div>
-
-<script src="../js/script.js"></script>
 </body>

@@ -16,8 +16,10 @@
 <div class="wrapper login-wrapper">
     <div class="info-section">
         <div class="info-section-content form-active" id="login">
-            <img class="info-section__logo" src="../assets/images/logo.svg" alt="logo">
-            <h1 class="info-section__title">Operative IQ Client Login</h1>
+            <section>
+                <img class="info-section__logo" src="../assets/images/logo.svg" alt="logo">
+                <h1 class="info-section__title">Operative IQ Client Login</h1>
+            </section>
             <div class="container--tabs">
                 <section class="tab-section row">
                     <ul class="nav nav-tabs">
@@ -26,21 +28,25 @@
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane active">
-                            <form class="form" action="#">
+                            <div id="traditional-login-alert" class="alert">
+                            </div>
+                            <form id="loginForm" class="form" action="#">
                                 <div class="form__group form__group-login">
                                     <input id="client-identifier" class="form__control" type="text"
                                            placeholder="Client Identifier" autocomplete="off">
                                     <label for="client-identifier" class="form__label-title">Client Identifier</label>
                                 </div>
-                                <div class="form__group form__group-login">
-                                    <input id="username" class="form__control" type="text"
-                                           placeholder="Username" autocomplete="off">
-                                    <label for="username" class="form__label-title">Username</label>
-                                </div>
-                                <div class="form__group form__group-login">
-                                    <input id="password" class="form__control" type="password"
-                                           placeholder="Password" autocomplete="off">
-                                    <label for="password" class="form__label-title">Password</label>
+                                <div class="form__group_grouped">
+                                    <div class="form__group form__group-login">
+                                        <input id="username" class="form__control" type="text"
+                                               placeholder="Username" autocomplete="off">
+                                        <label for="username" class="form__label-title">Username</label>
+                                    </div>
+                                    <div class="form__group form__group-login">
+                                        <input id="password" class="form__control" type="password"
+                                               placeholder="Password" autocomplete="off">
+                                        <label for="password" class="form__label-title">Password</label>
+                                    </div>
                                 </div>
                                 <div class="form__group-checkbox">
                                     <input id="remember-me" class="form__control-checkbox" type="checkbox"
@@ -54,19 +60,21 @@
                             </form>
                             <div>
                                 <ul class="login-issues">
-                                    <li><a class="login-issues__link" href="#">Forgot Password</a></li>
+                                    <li><a class="login-issues__link" href="./forgot-password.html">Forgot Password</a></li>
                                     <li><a class="login-issues__link" href="./index.html">Change Identifier</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane">
+                            <div id="biometric-login-alert" class="alert">
+                            </div>
                             <form class="form" action="./login.html">
-                                <div class="form__group">
+                                <div class="form__group form__group-biometric">
                                     <input id="finger-client-identifier" class="form__control" type="text"
                                            placeholder="Client Identifier" autocomplete="off">
                                     <label for="finger-client-identifier" class="form__label-title">Client Identifier</label>
                                 </div>
-                                <div>
+                                <div class="finger-print">
                                     <div class="scanning-container">
                                         <div class="lds-ring">
                                             <div></div>
@@ -79,6 +87,13 @@
                                     <div class="union-image">
                                         <img src="../assets/images/Union.svg" alt="union">
                                     </div>
+                                </div>
+                                <div class="finger-print-absent finger-print-absent_active">
+                                    <button id="download-finger-print" class="form__button"
+                                            type="button">
+                                        Download Extension
+                                        <img class="arrow-right" src="../assets/images/fi_arrow-right.svg" alt="->">
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -96,22 +111,66 @@
             </section>
         </div>
         <div class="info-section-content form-not-active" id="choose-app">
-            <img class="info-section__logo" src="../assets/images/logo.svg" alt="logo">
-            <h1 class="info-section__title">Profile Update Requested</h1>
             <section>
+                <img class="info-section__logo" src="../assets/images/logo.svg" alt="logo">
+                <h1 class="info-section__title preferred-app__title">Profile Update Requested</h1>
                 <p class="select-app">Please select your preferred application for login. You can change this later in
                     your Crew
                     Profile.
                 </p>
+            </section>
+            <section class="preferred-app__content">
                 <ul class="links-container">
-                    <li><a href="#"><img src="../assets/images/front-line.png" alt=""></a></li>
-                    <li><a href="#"><img src="../assets/images/back-office.png" alt=""></a></li>
-                    <li><a href="#"><img src="../assets/images/status-board.png" alt=""></a></li>
+                    <li class="preferred-app__link-wrapper">
+                        <a href="#"><img src="../assets/images/front-line.png" alt="">
+                            <span class="preferred-app__link">Front Line</span>
+                        </a>
+                    </li>
+                    <li class="preferred-app__link-wrapper">
+                        <a href="#">
+                        <img src="../assets/images/back-office.png" alt="">
+                            <span class="preferred-app__link">Back Office</span>
+                        </a>
+                    </li>
+                    <li class="preferred-app__link-wrapper">
+                        <a href="#">
+                            <img src="../assets/images/status-board.png" alt="">
+                            <span class="preferred-app__link">Status Board</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <hr class="divider">
+                <ul class="info-section__bottom">
+                    <li><a class="info-section__bottom-link" href="#">Home</a></li>
+                    <li><a class="info-section__bottom-link" href="#">Status Board</a></li>
+                    <li><a class="info-section__bottom-link" href="#">Contact Us</a></li>
+                    <li><a class="info-section__bottom-link" href="#">Resources</a></li>
                 </ul>
             </section>
         </div>
     </div>
 </div>
+
+<div class="modal" id="modal-one">
+    <div class="modal-bg modal-exit"></div>
+    <div class="modal-container">
+        <img class="modal-bell" src="../assets/images/bell.webp" alt="bell">
+        <button class="modal-close modal-exit ripple">
+            <img src="../assets/images/icon_close.svg" alt="X">
+        </button>
+        <div>
+            <h3 class="modal-title">Message from OperativeIQ</h3>
+            <p class="modal-content">
+                What do you call a factory that makes okay products? <br>
+                “A satisfactory”. <br>
+                Let’s not be a satisfactory.
+            </p>
+        </div>
+    </div>
+</div>
+
 <script src="../js/script.js"></script>
 </body>
 </html>
